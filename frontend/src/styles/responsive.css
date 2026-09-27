@@ -1,0 +1,493 @@
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 185px;
+    padding-inline: 12px;
+  }
+  .main-shell {
+    margin-left: 185px;
+  }
+  .sidebar-caption {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+  .sidebar .brand {
+    font-size: 22px;
+  }
+  .topbar {
+    padding-inline: 25px;
+  }
+  .page-content {
+    padding: 28px 25px;
+  }
+  .stats-grid {
+    gap: 14px;
+  }
+  .stat-card {
+    padding: 19px 17px;
+    column-gap: 10px;
+  }
+  .stat-decoration {
+    display: none;
+  }
+  .dashboard-grid {
+    grid-template-columns: minmax(0, 1.65fr) minmax(230px, 1fr);
+    gap: 16px;
+  }
+  .chart-card,
+  .deadlines-card {
+    padding: 19px;
+  }
+  .chart-legend {
+    display: none;
+  }
+  .task-row {
+    gap: 12px;
+    padding-inline: 20px;
+  }
+  .task-arrow {
+    display: none;
+  }
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .auth-story {
+    padding: 35px;
+  }
+  .auth-copy h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 980px) {
+  .sidebar {
+    width: 78px;
+    padding: 30px 10px;
+    align-items: center;
+  }
+  .main-shell {
+    margin-left: 78px;
+  }
+  .sidebar .brand {
+    font-size: 0;
+    gap: 0;
+    margin: 0 0 45px;
+  }
+  .sidebar .brand-symbol svg {
+    width: 28px;
+    height: 28px;
+  }
+  .brand-dot {
+    font-size: 24px;
+  }
+  .sidebar .brand-dot {
+    display: none;
+  }
+  .sidebar-caption,
+  .nav-item > span,
+  .nav-item i,
+  .focus-card,
+  .sidebar-footnote {
+    display: none;
+  }
+  .sidebar nav {
+    width: 100%;
+  }
+  .nav-item {
+    justify-content: center;
+    padding: 15px;
+  }
+  .sidebar-bottom {
+    width: 100%;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .deadline-list {
+    display: flex;
+    gap: 25px;
+  }
+  .deadline-item {
+    min-width: 0;
+  }
+  .deadline-summary {
+    margin-top: 12px;
+  }
+  .deadlines-card .empty {
+    padding: 20px;
+  }
+  .deadlines-card .empty-icon {
+    display: none;
+  }
+  .priority-label {
+    display: none;
+  }
+  .stat-card p {
+    font-size: 10px;
+  }
+  .stat-card small {
+    line-height: 1.6;
+  }
+  .stat-card {
+    grid-template-columns: 36px 1fr;
+  }
+  .stat-card .stat-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .stat-card .stat-icon svg {
+    width: 18px;
+  }
+  .stat-card strong {
+    font-size: 27px;
+  }
+  .auth-copy h1 {
+    font-size: 33px;
+  }
+  .auth-story {
+    padding: 32px 24px;
+  }
+  .auth-panel {
+    padding: 30px;
+  }
+  .auth-preview {
+    padding: 17px;
+  }
+  .preview-task {
+    font-size: 9px;
+  }
+  .preview-tag {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .activity-chart text {
+    font-size: 22px;
+  }
+  .mobile-logout {
+    display: inline-flex;
+  }
+  .sidebar {
+    inset: auto 0 0;
+    width: 100%;
+    height: 67px;
+    padding: 5px 8px max(5px, env(safe-area-inset-bottom));
+    flex-direction: row;
+    border: 0;
+    border-top: 1px solid var(--border);
+    background: #fffffffa;
+  }
+  .sidebar .brand,
+  .sidebar-bottom {
+    display: none;
+  }
+  .sidebar nav {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-around;
+  }
+  .nav-item {
+    width: auto;
+    flex: 1;
+    padding: 8px 2px;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 8px;
+  }
+  .nav-item > span {
+    display: block;
+    font-size: 9px;
+  }
+  .nav-item svg {
+    width: 19px;
+    height: 19px;
+  }
+  .main-shell {
+    margin: 0 0 67px;
+  }
+  .topbar {
+    padding: 16px 18px;
+    min-height: 80px;
+    gap: 9px;
+  }
+  .workspace-picker {
+    gap: 3px;
+    min-width: 0;
+  }
+  .workspace-picker label {
+    width: min(52vw, 260px);
+  }
+  .workspace-picker select {
+    font-size: 12px;
+  }
+  .profile > div {
+    display: none;
+  }
+  .profile .avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 11px;
+    border-radius: 11px;
+  }
+  .page-content {
+    padding: 24px 17px;
+  }
+  .page-heading {
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+  .page-heading h1 {
+    font-size: 27px;
+  }
+  .page-heading .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+  .page-heading p {
+    font-size: 11px;
+    margin-top: 7px;
+  }
+  .page-heading .primary {
+    min-height: 36px;
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+  .stats-grid {
+    gap: 8px;
+    margin-bottom: 17px;
+  }
+  .stat-card {
+    padding: 15px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 13px;
+  }
+  .stat-card .stat-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 10px;
+  }
+  .stat-card p {
+    min-height: 26px;
+    font-size: 9px;
+    line-height: 1.5;
+    margin: 0 0 6px;
+  }
+  .stat-card strong {
+    font-size: 27px;
+  }
+  .stat-card small {
+    display: none;
+  }
+  .dashboard-grid {
+    gap: 17px;
+    margin-bottom: 17px;
+  }
+  .chart-card,
+  .deadlines-card {
+    padding: 18px 16px;
+  }
+  .chart-card .section-heading h2,
+  .deadlines-card .section-heading h2 {
+    font-size: 15px;
+  }
+  .section-heading p {
+    font-size: 10px;
+  }
+  .chart-total {
+    margin-top: 20px;
+  }
+  .chart-total strong {
+    font-size: 22px;
+  }
+  .activity-chart {
+    margin-top: 6px;
+  }
+  .deadline-list {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 10px;
+  }
+  .deadline-item {
+    padding: 13px 0;
+  }
+  .deadline-summary {
+    margin-top: 5px;
+  }
+  .tasks-card > .section-heading {
+    padding: 20px 16px;
+  }
+  .tasks-card .section-heading h2 {
+    font-size: 15px;
+  }
+  .tasks-card .section-heading .text-button {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .task-row {
+    padding: 19px 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .task-symbol {
+    width: 33px;
+    height: 33px;
+  }
+  .task-symbol svg {
+    width: 16px;
+  }
+  .task-title {
+    flex-basis: calc(100% - 55px);
+  }
+  .task-title strong {
+    font-size: 12px;
+  }
+  .task-title small {
+    font-size: 9px;
+  }
+  .status-label {
+    margin-left: 43px;
+    min-width: 78px;
+    font-size: 9px;
+    padding: 5px 8px;
+  }
+  .task-date {
+    font-size: 9px;
+    margin-left: auto;
+    min-width: 0;
+  }
+  .filter-panel {
+    padding: 17px;
+  }
+  .filter-main {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .search-field {
+    flex-basis: 100%;
+  }
+  .filter-main > select {
+    flex: 1;
+    width: auto;
+  }
+  .filter-details {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .pagination {
+    padding-inline: 17px;
+  }
+  .project-grid,
+  .settings-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .project-card {
+    padding: 23px;
+  }
+  .settings-card {
+    padding: 20px;
+  }
+  .settings-card .section-heading {
+    flex-wrap: wrap;
+  }
+  .tag-catalog {
+    grid-template-columns: 1fr;
+  }
+  .member-row {
+    padding: 17px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .member-role {
+    font-size: 10px;
+  }
+  .member-row .text-button {
+    margin-left: auto;
+  }
+  .member-row .avatar {
+    width: 34px;
+    height: 34px;
+    font-size: 11px;
+  }
+  .welcome {
+    padding: 38px 24px;
+    margin-top: 10px;
+  }
+  .welcome h1 {
+    font-size: 26px;
+  }
+  .welcome h1 br {
+    display: none;
+  }
+  .welcome p {
+    font-size: 12px;
+  }
+  .welcome-steps {
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 35px;
+  }
+  .welcome-steps i {
+    display: none;
+  }
+  dialog {
+    padding: 21px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-footer {
+    flex-wrap: wrap;
+  }
+  .form-footer .primary {
+    flex: 1;
+  }
+  .modal-heading h2 {
+    font-size: 17px;
+  }
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+  .auth-story {
+    padding: 26px 27px;
+  }
+  .auth-story .brand {
+    font-size: 21px;
+  }
+  .auth-copy {
+    padding: 28px 0 8px;
+  }
+  .auth-copy h1 {
+    font-size: 31px;
+  }
+  .auth-copy h1 br {
+    display: none;
+  }
+  .auth-copy h1 em {
+    display: block;
+  }
+  .auth-copy > p {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+  .auth-copy .eyebrow,
+  .auth-preview,
+  .auth-footer {
+    display: none;
+  }
+  .auth-panel {
+    padding: 35px 27px;
+  }
+  .auth-form-wrap {
+    width: 100%;
+  }
+  .auth-form-wrap h2 {
+    font-size: 24px;
+  }
+  .session-note {
+    margin-top: 23px;
+  }
+}

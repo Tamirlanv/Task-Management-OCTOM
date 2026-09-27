@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-09-27T12:38:19.714712+00:00",
+  "source": "taskman_test",
+  "dump_seconds": 0.965,
+  "restore_seconds": 2.129,
+  "verified_counts": {
+    "users": 100,
+    "workspaces": 100,
+    "projects": 1000,
+    "tasks": 100000,
+    "roles": 4,
+    "revision": "0002_task_search"
+  },
+  "result": "passed",
+  "scope": "Local disposable database; production storage and RPO/RTO are not certified"
+}

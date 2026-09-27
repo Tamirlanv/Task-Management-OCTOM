@@ -1,0 +1,9 @@
+{
+  "samples": 20,
+  "hash_p95_ms": 120.01,
+  "verify_p95_ms": 171.04,
+  "argon2_memory_kib": 65536,
+  "argon2_time_cost": 3,
+  "argon2_parallelism": 4,
+  "environment": "test API container, 2 CPU / 2 GiB; sequential hashing measured separately from HTTP load"
+}

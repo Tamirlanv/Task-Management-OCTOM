@@ -1,0 +1,41 @@
+/* Keep the reference's soft surfaces while maintaining readable labels. */
+.nav-item {
+  color: #71758d;
+}
+.stat-card p,
+.stat-card small,
+.page-heading p,
+.section-heading p,
+.task-date,
+.deadline-item small,
+.chart-total > span,
+.profile span:not(.avatar),
+.session-note,
+.auth-switch,
+.auth-form-wrap > .eyebrow {
+  color: #73778f;
+}
+.status-label {
+  color: #746681;
+}
+.status-label.in_progress {
+  color: #756096;
+}
+.status-label.done {
+  color: #357f6c;
+}
+.status-label.cancelled {
+  color: #6e6e80;
+}
+.priority-label {
+  color: #7d677e;
+}
+.priority-label.high {
+  color: #996331;
+}
+.priority-label.urgent {
+  color: #a54363;
+}
+.priority-label.low {
+  color: #387e79;
+}

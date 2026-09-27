@@ -1,0 +1,65 @@
+name: task-management-test
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: taskman
+      POSTGRES_PASSWORD: test-only
+      POSTGRES_DB: taskman_test
+    ports:
+      - "127.0.0.1:55432:5432"
+    tmpfs:
+      - /var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U taskman -d taskman_test"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 4G
+  redis:
+    image: redis:8.2
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    ports:
+      - "127.0.0.1:56379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  migrations:
+    profiles: ["benchmark"]
+    image: task-management-api:0.1.0
+    command: ["alembic", "upgrade", "head"]
+    environment: &benchmark-environment
+      APP_ENV: test
+      DATABASE_URL: postgresql+asyncpg://taskman:test-only@postgres:5432/taskman_test
+      REDIS_URL: redis://redis:6379/15
+      JWT_SECRET: test-only-secret-test-only-secret-test-only-secret-test-only-secret-
+    depends_on:
+      postgres:
+        condition: service_healthy
+  api:
+    profiles: ["benchmark"]
+    image: task-management-api:0.1.0
+    environment: *benchmark-environment
+    ports:
+      - "127.0.0.1:8001:8000"
+    depends_on:
+      migrations:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=4)"]
+      interval: 3s
+      timeout: 5s
+      retries: 30

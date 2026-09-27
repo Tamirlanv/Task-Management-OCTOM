@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-09-27T12:48:22.758215+00:00",
+  "duration_seconds": 29.99,
+  "requested_duration_seconds": 30,
+  "target_rps": 50,
+  "actual_rps": 50.01,
+  "requests": 1500,
+  "statuses": {
+    "200": 1500
+  },
+  "transport_error_types": {},
+  "read_p95_ms": 31.72,
+  "write_p95_ms": 31.4,
+  "read_p99_ms": 50.6,
+  "write_p99_ms": 88.1,
+  "error_percent": 0.0,
+  "dataset": {
+    "workspaces": 100,
+    "projects": 1000,
+    "tasks": 100000,
+    "users": 100
+  },
+  "resource_limits": {
+    "api": "2 CPU / 2 GiB",
+    "postgres": "2 CPU / 4 GiB"
+  },
+  "client_python": "3.12.14",
+  "packages": {
+    "fastapi": "0.141.1",
+    "sqlalchemy": "2.0.54",
+    "asyncpg": "0.31.0",
+    "redis": "6.4.0"
+  },
+  "scope": "Docker Desktop local benchmark; excludes login hashing and external network latency"
+}
